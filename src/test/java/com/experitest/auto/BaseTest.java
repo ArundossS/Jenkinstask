@@ -12,17 +12,20 @@ public class BaseTest {
 
 	protected DesiredCapabilities dc = new DesiredCapabilities();
 	protected Properties cloudProperties = new Properties();
+	protected String CloudUrl = System.getenv("CLOUDURL");
+	protected String AccessKey = System.getenv("ACCESSKEY");
+	protected String BuildNumber= System.getenv("BUILD_NUMBER");
+	
 
 	public void init(String deviceQuery) throws Exception {
-		initCloudProperties();
+		//initCloudProperties();
 		dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
-		dc.setCapability("user", getProperty("username", cloudProperties));
-		dc.setCapability("password", getProperty("password", cloudProperties));
-		// In case your user is assign to a single project leave empty,
-		// otherwise please specify the project name
-		dc.setCapability("project", getProperty("project", cloudProperties));
+		dc.setCapability("build.number", BuildNumber);
+		dc.setCapability("accessKey", AccessKey);
+		
+		
 
 	}
 
