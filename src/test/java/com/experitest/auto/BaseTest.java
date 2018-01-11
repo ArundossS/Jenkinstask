@@ -24,7 +24,7 @@ public class BaseTest {
 		dc.setCapability("reportFormat", "xml");
 		dc.setCapability("build.number", BuildNumber);
 		dc.setCapability("accessKey", AccessKey);
-		
+		dc.setCapability("stream", "Arundoss_jenkins_task");
 		
 
 	}
