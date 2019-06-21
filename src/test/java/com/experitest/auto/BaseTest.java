@@ -20,12 +20,8 @@ public class BaseTest {
 	public void init(String deviceQuery) throws Exception {
 		//initCloudProperties();
 		dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
-		dc.setCapability("reportDirectory", "reports");
-		dc.setCapability("reportFormat", "xml");
 		dc.setCapability("build.number", BuildNumber);
-		dc.setCapability("accessKey", AccessKey);
-		dc.setCapability("stream", "Arundoss_jenkins_task");
-	
+		dc.setCapability("accessKey", AccessKey);	
 	}
 
 	protected String getProperty(String property, Properties props) throws FileNotFoundException, IOException {
