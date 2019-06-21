@@ -22,7 +22,7 @@ dependencies {
 
 test {
     useTestNG() {
-        suites './testng-wu123.xml'
+        suites './testng.xml'
     }
   
 }
