@@ -26,6 +26,8 @@ public class AndroidDemoTest extends BaseTest {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+		dc.setCapability("deviceName", "auto");
+		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 		dc.setCapability("testName", "AndroidDemoTest");
 		driver = new AndroidDriver<>(new URL(CloudUrl + "/wd/hub"), dc);
 	}
