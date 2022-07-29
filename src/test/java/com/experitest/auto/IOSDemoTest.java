@@ -27,6 +27,7 @@ public class IOSDemoTest extends BaseTest {
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 		dc.setCapability("platformName", MobilePlatform.IOS);
+		dc.setCapability("appiumVersion", "1.22.2");
 		dc.setCapability("deviceName", "auto");
 		dc.setCapability("testName", "iOS Tests from CI-CD");
 		driver = new IOSDriver<>(new URL(CloudUrl + "/wd/hub"), dc);
