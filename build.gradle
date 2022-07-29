@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'io.appium', name: 'java-client', version: '5.0.4'
+    implementation group: 'io.appium', name: 'java-client', version: '7.6.0'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.testng', name: 'testng', version: '6.9.10'
     compile 'org.hamcrest:hamcrest-library:1.3'

@@ -1,6 +1,7 @@
 package com.experitest.auto;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
@@ -37,6 +38,7 @@ public class AndroidDemoTest extends BaseTest {
 
 	@Test
 	public void test(){
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("com.experitest.ExperiBank:id/usernameTextField")).sendKeys("company");
 		driver.findElement(By.id("com.experitest.ExperiBank:id/passwordTextField")).sendKeys("company");
 		driver.findElement(By.id("com.experitest.ExperiBank:id/loginButton")).click();
