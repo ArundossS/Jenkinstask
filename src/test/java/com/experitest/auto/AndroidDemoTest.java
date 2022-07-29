@@ -28,7 +28,7 @@ public class AndroidDemoTest extends BaseTest {
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("deviceName", "auto");
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-		dc.setCapability("testName", "AndroidDemoTest");
+		dc.setCapability("testName", "Android Tests from CI-CD");
 		driver = new AndroidDriver<>(new URL(CloudUrl + "/wd/hub"), dc);
 	}
 
