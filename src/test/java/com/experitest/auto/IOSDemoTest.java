@@ -13,6 +13,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 
 public class IOSDemoTest extends BaseTest {
 	protected IOSDriver<IOSElement> driver = null;
@@ -25,6 +26,7 @@ public class IOSDemoTest extends BaseTest {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+		dc.setCapability("platformName", MobilePlatform.IOS);
 		dc.setCapability("deviceName", "auto");
 		dc.setCapability("testName", "iOS Tests from CI-CD");
 		driver = new IOSDriver<>(new URL(CloudUrl + "/wd/hub"), dc);

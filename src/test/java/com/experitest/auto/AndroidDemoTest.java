@@ -13,6 +13,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.remote.MobilePlatform;
 
 
 public class AndroidDemoTest extends BaseTest {
@@ -27,6 +28,7 @@ public class AndroidDemoTest extends BaseTest {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("deviceName", "auto");
+		dc.setCapability("platformName", MobilePlatform.ANDROID);
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 		dc.setCapability("testName", "Android Tests from CI-CD");
 		driver = new AndroidDriver<>(new URL(CloudUrl + "/wd/hub"), dc);
