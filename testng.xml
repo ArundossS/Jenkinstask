@@ -25,16 +25,4 @@
       <class name="com.experitest.auto.AndroidDemoTest"/>
     </classes>
   </test> <!-- Test -->
-   <test name="TestIOS2">
-  	<parameter name="deviceQuery" value="@os='ios'"/>
-    <classes>
-      <class name="com.experitest.auto.IOSDemoTest"/>
-    </classes>
-  </test> <!-- Test -->
-  <test name="TestAndroid2">
-  	<parameter name="deviceQuery" value="@os='android'"/>
-    <classes>
-      <class name="com.experitest.auto.AndroidDemoTest"/>
-    </classes>
-  </test> <!-- Test -->
 </suite> <!-- Suite -->
