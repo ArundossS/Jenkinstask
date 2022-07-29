@@ -8,7 +8,7 @@
     </classes>
   </test> <!-- Test -->
   <test name="TestAndroid">
-  	<parameter name="deviceQuery" value="@os='android' and @category='PHONE' and @serialnumber='LGH85056416a94'"/>
+  	<parameter name="deviceQuery" value="@os='android' and @category='PHONE' and @serialnumber='ce10160ab1e1ce2201'"/>
     <classes>
       <class name="com.experitest.auto.AndroidDemoTest"/>
     </classes>
